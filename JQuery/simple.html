@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Test JQuery</title>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        debugger;
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                //$("p").toggle("fast");
+                $("div").fadeTo("slow",0.5);
+            });
+        });
+
+    
+    </script>
+</head>
+<body>
+    <input type="text" id="txtName" value="abc">
+    <input type="button" id="btn" 
+           value="Click Me">
+    <p>HELLO</p>
+    <p>HELLO WORLD</p>
+    <div>good bye</div>
+</body>
+</html>

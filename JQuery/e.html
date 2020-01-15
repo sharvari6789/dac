@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="exam.css">
+            <script src="exam.js"></script>
+            <script src="jquery-1.8.3.min.js"></script>
+            <script>
+                $(document).ready(function(){
+                    $("#add").click(function(){
+                        var row="<tr><td><input type="text" id="name"></td><td><input type="text" id="contry"></td><td><input type="text" id="age"></td></tr>";
+                        $("#t").append(row);
+                    });
+                    $('#delete').live("click",function(){
+                     $(this).parent().parent().remove(); 
+                     });
+                });
+        </script>
+            
+    </head>
+    <body>
+        <form class="formcolor">
+        <table border="1px" class="table1" id="t">
+            <tr>
+                <td>NAME</td>
+                <td>COUNTRY</td>
+                <td>AGE</td>
+            </tr>
+            <tr>
+                 <td><input type="text" id="name"></td>
+                <td><input type="text" id="contry"></td>
+                <td><input type="text" id="age"></td>
+                <td><input type="button" id="edit" value="edit"></td>
+                <td><input type="button" id="save" value="save"></td>
+                <td><input type="button" id="delete" value="delete"></td>
+
+            </tr>
+            <tr>
+            <tr>
+                <td><input type="button" value="submit" onclick="validate()"></td>
+                <td><input type="button" value="add row" id="add"></td>
+            </tr>
+        </table>
+    </form>
+    </body>
+</html>

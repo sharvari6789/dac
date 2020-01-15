@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Test JQuery</title>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        debugger;
+        jQuery(document).ready(CallMeOnReady);
+
+        function CallMeOnReady()
+        {
+            debugger;
+            jQuery("#btn").click(CallMe)
+        }
+        
+
+        function CallMe()
+        {
+            debugger;
+            alert(jQuery("#txtName").val());
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="txtName" value="abc">
+    <input type="button" id="btn" 
+           value="Click Me">
+</body>
+</html>
+
+
+
+
+

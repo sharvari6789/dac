@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            var attempt = 3;
+            var randomData = Math.floor(Math.random()*10);
+            if(randomData == 0)
+            {
+                    randomData = 5;
+            }
+            $("#" + randomData).html("GOLD");
+$
+            $('div').click(function(){
+                 if(attempt >0)
+                 {
+                    if($(this).html()!="GOLD")
+                    {
+                        attempt = attempt - 1;
+                        $(this).css("background-color", "Red");
+                        $(this).unbind("click");
+                    }
+                    else{
+                        $(this).css("background-color", "gold");
+                       
+                        alert("You WIn");
+                        //Below code on Reset Button
+                        window.location.href = 
+                                "030PuneDemo.html";   
+                    }
+                 }
+            })
+
+
+        });
+    </script>
+    
+</head>
+<body>
+    <div id="1" style="height:50px; width:50px;background-color:lime">
+        
+    </div>
+    <br>
+    <div id="2" style="height:50px; width:50px;background-color:lime">
+            
+    </div>
+    <br>
+    <div id="3" style="height:50px; width:50px;background-color:lime">
+            
+    </div>
+</body>
+</html>

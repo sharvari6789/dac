@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <script src="jquery-3.4.1.js"></script>
+        <script>
+            $(document).ready(callMeOnReady);
+            function callMeOnReady()
+            {
+                $("#btn").click(callme)
+            }
+            function callme()
+            {
+                //alert($("#letters").val());
+                alert("hello "+$("#letters").val());
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="letters" value="sharu">
+        <input type="button" value="click me" id="btn">
+    </body>
+</html>

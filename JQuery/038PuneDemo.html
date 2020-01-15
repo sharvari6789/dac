@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        function DoSomething()
+        {
+            debugger;
+            // var data = {No: 1, Name:"Mahesh", City:"Pune"};
+            // alert(data.Name);
+
+            // var data = {No: 1, Name: "Pizza", Price : "100", Photo: "car123.jpg"};
+            // alert(data.Name);
+
+            var data = [
+                        {No: 1, Name: "Pizza", Price : "100", Photo: "car123.jpg"},
+                        {No: 2, Name: "Vadapav", Price : "10", Photo: "car123.jpg"},
+                        {No: 3, Name: "Popcorn", Price : "50", Photo: "car123.jpg"}
+                       ]
+            for(i=0; i< data.length; i ++)
+            {
+                alert(data[i].Name);
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="Click Me" onclick="DoSomething()">
+</body>
+</html>

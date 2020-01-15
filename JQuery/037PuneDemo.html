@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Test Live</title>
+    <style>
+            .tableStyle
+            {
+                height: 100%;
+                width: 100%;
+            }
+        </style>
+    <!-- <script src="jquery-3.4.1.js"></script> -->
+    <script src="jquery-1.8.3.min.js"></script>
+    <script>
+        debugger;
+        $(document).ready(function(){
+            debugger;
+
+            $('#btnRemove').live("click",function(){
+                debugger;
+                $(this).parent().parent().remove(); 
+                
+            })
+            $('#btnPlus').live("click",function(){
+                debugger;
+                $($(this).parent().parent().children()[6]).html("10")  
+            })
+
+            $('#btnDynamic').live("click",function(){
+                debugger;
+                var data = $($(this).parent().parent().children()[1]).html()
+                alert("Hi! " + data);
+            });
+
+            $("#btnAdd").click(function(){
+                debugger;
+                //$("#myTable").append("<tr><td>"+no+"</td><td>ABC</td><td>Pune</td></tr>");
+                var no = $("#txtNo").val();
+                var name =  $("#txtName").val();
+                var address =  $("#txtAddress").val();
+                
+                var row = "<tr><td>" + no +
+                          "</td><td>" + name + 
+                          "</td><td>" + address + 
+                          "</td><td>" + 
+                          "<input type='button' value='Click Me' id='btnDynamic'>" + 
+                          "</td><td>" + 
+                          "<input type='button' value='+' id='btnPlus'>" + 
+                          "</td><td>" + 
+                          "<input type='button' value='-' id='btnMinus'>" + 
+                          "</td><td>" + 
+                         "<input type='button' value='Remove' id='btnRemove'>" + 
+                          "</td><td>" + 
+                          "</td></tr>";
+                $("#myTable").append(row);
+            });
+        });
+    </script>
+    
+</head>
+<body>
+    No: <input type="text" id="txtNo"><br>
+    Name: <input type="text" id="txtName"><br>
+    Address: <input type="text" id="txtAddress"><br>
+    <input type="button" id="btnAdd" value="Add New Row">
+    <br>
+    <table id="myTable" border="1" class="tableStyle">
+        
+    </table>
+
+</body>
+</html>
+
+
+

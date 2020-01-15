@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <script src="jquery-3.4.1.js"></script>
+        <script>
+        $(document).ready(function(){
+
+            $("#2").click(function(){
+                $("#1").css("background-color","white");
+                });
+
+            $("#3").click(function(){ 
+                $("#1").css("height","50px");
+                });
+
+            $("#4").click(function(){
+                $("#1").css("width","50px");
+                 });
+
+            $("#5").click(function(){
+                $("#1").css("background-color","green").css("height","30px").css("width","30px");
+            });
+        });
+        </script>
+    </head>
+    <body>
+        <div id="1" style="background-color: brown ;height:100px ;width:100px">HELLO</div>
+        <input type="button" id="2" value="change color"><br>
+        <input type="button" id="3" value="change height"><br>
+        <input type="button" id="4" value="change width"><br>
+        <input type="button" id="5" value="change all"><br>
+    </body>
+</html>

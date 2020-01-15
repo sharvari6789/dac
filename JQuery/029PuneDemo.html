@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        function DoExecuteThisOnMouseOver()
+        {
+            $(this).css("background-color", "pink");
+        }
+        function DoExecuteThisOnMouseOut()
+        {
+            $(this).css("background-color", "white");
+        }
+        $(document).ready(function(){
+            // $('#btn').click(function(){
+            //     // $('tr').css("background-color", "pink");
+            //      $('tr:odd').css("background-color", "pink");
+            //     $('tr:even').css("background-color", "blue");
+            // })
+
+
+                $("tr").mouseover(DoExecuteThisOnMouseOver);
+
+                 $("tr").mouseout(DoExecuteThisOnMouseOut);
+
+                $("tr").click(function(){
+                    debugger;
+                    if($(this).attr("surname") == undefined)
+                    {
+                        $(this).css("background-color", "green");
+
+                        $(this).attr("surname", "selected");
+                        $(this).unbind("mouseover mouseout");
+                    }
+                    else
+                    {
+                        $(this).css("background-color", "white");
+
+                        $(this).attr("surname", undefined);
+                        $(this).bind("mouseover", DoExecuteThisOnMouseOver);
+                        $(this).bind("mouseout", DoExecuteThisOnMouseOut);
+                    }
+                });
+
+
+        });
+    </script>
+    
+</head>
+<body>
+
+        <input  type="button" id="btn" value="Click Me">
+        <br>
+        
+    <table border="1" style="height:400px; width:400px">
+        <tr>
+            <td>10</td><td>Sachin</td><td>Tendulkar</td><td>Mumbai</td>
+        </tr>
+        <tr>
+                <td>10</td><td>Sachin</td><td>Tendulkar</td><td>Mumbai</td>
+            </tr>
+            <tr>
+                    <td>10</td><td>Sachin</td><td>Tendulkar</td><td>Mumbai</td>
+                </tr>
+                <tr>
+                        <td>10</td><td>Sachin</td><td>Tendulkar</td><td>Mumbai</td>
+                    </tr>
+                    <tr>
+                            <td>10</td><td>Sachin</td><td>Tendulkar</td><td>Mumbai</td>
+                        </tr>
+                        <tr>
+                                <td>10</td><td>Sachin</td><td>Tendulkar</td><td>Mumbai</td>
+                            </tr>
+                            <tr>
+                                    <td>10</td><td>Sachin</td><td>Tendulkar</td><td>Mumbai</td>
+                                </tr>
+                                <tr>
+                                        <td>10</td><td>Sachin</td><td>Tendulkar</td><td>Mumbai</td>
+                                    </tr>
+                                    <tr>
+                                            <td>10</td><td>Sachin</td><td>Tendulkar</td><td>Mumbai</td>
+                                        </tr>
+                                        <tr>
+                                                <td>10</td><td>Sachin</td><td>Tendulkar</td><td>Mumbai</td>
+                                            </tr>
+                                            <tr>
+                                                    <td>10</td><td>Sachin</td><td>Tendulkar</td><td>Mumbai</td>
+                                                </tr>
+    </table>
+</body>
+</html>

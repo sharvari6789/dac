@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('div').click(function(){
+                 $(this).css("background-color", "pink");
+                 $(this).html("abcdef");
+                 $(this).attr("title","My Title")
+                 //alert($(this).html());
+                //  alert($(this).attr("id"));
+                //  alert($(this).attr("title"));
+                 $(this).unbind("click");
+            })
+
+
+        });
+    </script>
+    
+</head>
+<body>
+    <div id="a" style="height:50px; width:50px;background-color:lime">
+        A
+    </div>
+    <br>
+    <div id="b" style="height:50px; width:50px;background-color:lime">
+            B
+    </div>
+    <br>
+    <div id="c" style="height:50px; width:50px;background-color:lime">
+            C
+    </div>
+</body>
+</html>

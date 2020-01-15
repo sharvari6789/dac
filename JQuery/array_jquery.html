@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <script src="jquery-3.4.1.js"></script>
+        <script>
+
+
+            // $(document).ready(function(){
+            //     $("#5").click(function(){
+            //         var array =document.getElementsByTagName("div")
+            //         for(i=0;i<array.length;i++)
+            //         {
+            //             array[i].style.backgroundColor="green"
+            //         }
+            //     });
+            // });
+
+
+            $(document).ready(function(){
+                $("#5").click(function(){
+                    var array =document.getElementsByTagName("div")
+                    for(i=0;i<array.length;i++)
+                    {
+                        alert(array[i].innerHTML)
+                    }
+                });
+            });
+
+
+        </script>
+    </head>
+    <body>
+        <div id="1" style="background-color: tomato ; height:50px ;width:50px">welome</div><br>
+        <div id="2" style="background-color: tomato ; height:50px ;width:50px">to</div><br>
+        <div id="3" style="background-color: tomato ; height:50px ;width:50px">our</div><br>
+        <div id="4" style="background-color: tomato ; height:50px ;width:50px">page</div><br>
+        <input type="button" id="5" value="submit">
+    </body>
+</html>

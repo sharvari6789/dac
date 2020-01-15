@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <script>
+            function validate ()
+            {
+               var isNameEmpty=checkEmpty("name" , "nameDiv", "name is empty");
+
+                if(isNameEmpty == true)
+                {
+                    checkfortext("name", "nameDiv", "name should contain letters");
+                }
+
+                var isAgeEmpty=checkEmpty("age" ,"ageDiv", "age is not given");
+                if(isAgeEmpty == true)
+                {
+                    checkRange("age", "ageDiv", 18, 60,"age out of bound");
+                }
+                var isMailEmpty=checkEmpty("mail", "mailDiv", "this fiels is empty");
+                if(isMailEmpty == true)
+                {
+                    checkmail("mail","mailDiv","NOT VALID EMAIL ID");
+                }
+            }
+                function checkmail(controlID, divID, msg)
+                {
+                    var element=document.getElementById(controlID);
+                    var div1=document.getElementById(divID);
+                    if(element.value=="" || element.value.indexOf("@")<2 ||  (element.value.indexOf(".")-element.value.indexOf("@"))>3)
+                    {
+                        div1.innerHTML=msg;
+                    }
+                    else
+                    {
+                        div1.innerHTML="";
+                    }
+                }
+                function checkRange (controlID, divID, min, max, msg)
+                {
+                    var element=document.getElementById(controlID);
+                    var div1=document.getElementById(divID);
+                    if(element.value<min || element.value>60)
+                    {
+                        div1.innerHTML=msg;
+                        return false;
+                    }
+                    else
+                    {
+                        div1.innerHTML="";
+                        return true;
+                    }
+                }
+                function checkfortext(controlID, divID, msg)
+                {
+                    var element=document.getElementById(controlID);
+                    var div1=document.getElementById(divID);
+                    if(!isNaN(element.value))
+                    {
+                        div1.innerHTML=msg;
+                        return false;
+                    }
+                    else
+                    {
+                        div1.innerHTML="";
+                        return true;
+                    }
+                }
+                function checkEmpty (controlID, divID, msg)
+                {
+                    var element=document.getElementById(controlID);
+                    var div1=document.getElementById(divID);
+                    if(element.value == "")
+                    {
+                        div1.innerHTML=msg;
+                        return false;
+                    }
+                    else
+                    {
+                        div1.innerHTML="";
+                        return true; 
+                    }
+                }
+        </script>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>NAME :</td>
+                <td><input type="text" id="name"></td>
+                <td><div id="nameDiv"></div></td>
+            </tr>
+            <tr>
+                <td>AGE :</td>
+                <td><input type="number" id="age"></td>
+                <td><div id="ageDiv"></div></td>
+            </tr>
+            <tr>
+                <td>Email ID:</td>
+                <td><input type="text" id="mail"</td>
+                <td><div id="mailDiv"></div></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="submit" onclick="validate()"></td>
+            </tr>
+        </table>
+    </body>
+</html>

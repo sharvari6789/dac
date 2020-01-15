@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="jquery-1.8.3.min.js"></script>
+    <script>
+        
+        $(document).ready(function(){
+            debugger
+            $.ajax({
+                url: "Data.json",
+                type: "GET",
+                contentType: "application/json",
+                success : function(data){
+                    debugger;   
+                        for(i=0;i<data.length; i++)
+                        {
+                            var row =   '<tr>'+
+                                        '<td>' + data[i].No + '</td>' + 
+                                        '<td>' + 
+                                            '<img src="' + data[i].Photo + '" style="height:100px; width:100px">' + 
+                                            '<br>' + 
+                                            '<span>' +  data[i].Name + '</span>' + 
+                                        '</td>' + 
+                                        '<td>' + 'Price:' + data[i].Price + '</td>' +
+                                        '<td>' +
+                                            '<input type="button" value=" + " id="btnPlus">' + 
+                                            '<input type="text" id="txtQty" value="0">' + 
+                                            '<input type="button" value=" - " id="btnMinus">' + 
+                                        '</td>' +
+                                        '<td>' + '0' + '</td>' + 
+                                        '<td>' +
+                                            '<input type="button" value=" Remove " id="btnRemove">'+
+                                        '</td>' + 
+                                        '</tr>';
+                        $('#myTable').append(row);              
+                        }
+                },
+                error : function(err){
+                    debugger;
+                }
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <table id="myTable" style="height:100%; width:100%" border="1">
+        <tr>
+            <th>SNO</th>
+            <th>Item</th>
+            <th>Price</th>
+            <th>QTY</th>
+            <th>SubTotal</th>
+            <th></th>
+        </tr>
+      
+    </table>
+</body>
+</html>

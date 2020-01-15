@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="exam.css"></link>
+        <script>
+        function validate()
+        {
+                var element=document.getElementById("nm");
+                if(element.value ==" ")
+                {
+                    return false;
+                    element.value="enter name";
+                }
+                else{
+                    return true;
+                }
+            
+        }
+        </script>
+    </head>
+    <body>
+        <table class="tableborder" >
+            <tr>
+                <td>Name</td>
+                <td>Country</td>
+                <td>Age</td>
+                <td></td>
+            </tr>
+            <tr>
+               <td><input type="text" id="nm"></td>
+                <td><input type="text" id="con"></td>
+                <td><input type="text" id="age"></td>
+                <td><input type="button" value="edit" id="edit"></td>
+                <td><input type="button" value="save" id="save"></td>
+                <td><input type="button" value="delete" id="delete"></td>
+                <td><input type="button" value="add row" id="add" onclick="validate()"></td>
+            </tr>
+        </table>
+    </body>
+</html>

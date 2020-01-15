@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <script src="jquery-3.4.1.js"></script>
+        <script>
+        $(document).ready(function(){
+            alert("hello");
+            var attempt=9;
+            var num=Math.random();
+            var data=num*10;
+            var fixnum=Math.floor(data);
+            if(fixnum==0)
+            {
+                fixnum=2;
+            }
+            alert(fixnum);
+            $("div").click(function(){
+                if(attempt>0)
+                {
+                    attempt=attempt-1;
+                    alert($(this).id);
+                    if($(this).id == fixnum)
+                    {
+                        alert("you won");
+                        $(this).style.backgroundColor="gold";
+                    }
+                    $(this).css("background-color", "Red");
+                   $(this).unbind("click");
+                }
+                else
+                {
+                    alert("you lost");
+                }
+
+            });
+        });
+        </script>
+    </head>
+    <body>
+        <table border="1" style="height:500px ; width:500px">
+            <tr>
+                <td><div id="1" style="background-color: teal">     <br>   </div></td>
+                <td><div id="2" style="background-color: teal">       <br>      </div></td>
+                <td><div id="3" style="background-color: teal">       <br>       </div></td>
+            </tr>
+            <tr>
+                    <td><div id="4" style="background-color: teal"><br> </div></td>
+                    <td><div id="5" style="background-color: teal"><br> </div></td>
+                    <td><div id="6" style="background-color: teal"><br> </div></td>
+            </tr>
+            <tr>
+                    <td><div id="7" style="background-color: teal"><br> </div></td>
+                    <td><div id="8" style="background-color: teal"><br></div></td>
+                    <td><div id="9" style="background-color: teal"><br></div></td>
+          </tr>
+        </table>
+    </body>
+</html>

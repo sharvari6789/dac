@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+    <style>
+        .A{
+            background-color: yellow;
+            height: 200px;
+            width: 200px;
+        }
+
+        .B{
+            background-color: red;
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+    <script src="jquery-1.8.3.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#myDiv').mouseover(function(){
+                $(this).toggleClass("B");
+            });
+
+            $('#myDiv').mouseout(function(){
+                $(this).toggleClass("B");
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <div id="myDiv" class="A B">
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Test JQuery</title>
+    <style>
+        .A
+        {
+            height:100px; 
+            width: 100px; 
+            background-color: yellow
+        }
+
+        .B
+        {
+            height:100px; 
+            width: 100px; 
+            background-color:green
+        }
+    </style>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        
+        $(document).ready(function(){
+            $('#btn').click(function(){
+                //$(".A")
+                //.filter("div[title='nagpur']")
+                //.css("background-color","blue");
+
+                // $("div[title='nagpur']")
+                // .css("background-color","blue");
+
+                // $("div[title*='n']")
+                // .css("background-color","blue");
+
+                // $("div[title^='p']")
+                // .css("background-color","blue");
+
+                // $("div[title$='i']")
+                // .css("background-color","blue");
+
+                $("div[title*='n']").filter("div[title$='i']").css("background-color","blue");
+
+            });
+        });
+    </script>
+</head>
+<body>
+    <input type="button" id="btn" value="Click Me">
+    <br>
+    <div id="div1" class="A" name="one" title="pune">
+    CDAC1
+    </div>
+    <br>
+    <div id="div2" class="B" name="another" title="panji">
+    CDAC2
+    </div>
+    <br>
+    <div id="div3" class="A" name="xyz" title="mumbai">
+    CDAC3
+    </div>
+    <br>
+    <div id="div4" class="A" name="some" title="nagpur">
+            CDAC4
+    </div>
+
+
+    <br>
+
+
+    <div id="div5" class="B" name="some" title="nagpur">
+        CDAC5
+    </div>
+    
+
+
+    <br>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

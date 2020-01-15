@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Test JQuery</title>
+    <style>
+        .A
+        {
+            height:100px; 
+            width: 100px; 
+            background-color: yellow
+        }
+
+        .B
+        {
+            height:100px; 
+            width: 100px; 
+            background-color:green
+        }
+    </style>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        
+        $(document).ready(function(){
+            $('#btn').click(function(){
+                // $(".A").each(function(){
+                //     $(this).css("background-color","black");
+                        //alert($(this).html())
+                // });
+
+                //$(".A").css("background-color","black");
+
+
+                //$(".A").css("background-color","black");
+                //$("div.A").css("background-color","black");
+            });
+        });
+    </script>
+</head>
+<body>
+    <input type="button" id="btn" value="Click Me">
+    <br>
+    <input type="text" id="txtName" class="A">
+    <br>
+    <div id="div1" class="A">
+    CDAC1
+    </div>
+    <br>
+    <div id="div2" class="B">
+    CDAC2
+    </div>
+    <br>
+    <div id="div3" class="A">
+    CDAC3
+    </div>
+
+
+    <br>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

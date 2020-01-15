@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Test Live</title>
+    <style>
+            .tableStyle
+            {
+                height: 100%;
+                width: 100%;
+            }
+        </style>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btnAdd").click(function(){
+                //$("#myTable").append("<tr><td>100</td><td>ABC</td><td>Pune</td></tr>");
+                var no = $("#txtNo").val();
+                var name =  $("#txtName").val();
+                var address =  $("#txtAddress").val();
+                
+                var row = "<tr><td>" + no +
+                          "</td><td>" + name + 
+                          "</td><td>" + address + 
+                          "</td></tr>";
+                $("#myTable").append(row);
+            });
+        });
+    </script>
+    
+</head>
+<body>
+    No: <input type="text" id="txtNo"><br>
+    Name: <input type="text" id="txtName"><br>
+    Address: <input type="text" id="txtAddress"><br>
+    <input type="button" id="btnAdd" value="Add New Row">
+    <br>
+    <table id="myTable" border="1" class="tableStyle">
+        
+    </table>
+
+</body>
+</html>
+
+
+
